@@ -1,0 +1,14 @@
+version: '3'
+services:
+  clash:
+    image: dreamacro/clash
+    volumes:
+      - ./config:/root/.config/clash
+      - ./clash-dashboard:/root/clash-dashboard
+    network_mode: "host"
+      #  dashboard:
+      #    image: nginx:alpine
+      #    network_mode: "host"
+      #    volumes:
+      #      - ./clash-dashboard:/usr/share/nginx/html:ro
+      #      - ./conf.d:/etc/nginx/conf.d
